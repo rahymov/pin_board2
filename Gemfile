@@ -19,6 +19,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'simple_form', '~> 3.5'
 gem 'devise', '~> 4.3'
 gem 'paperclip', '~> 5.1'
+gem 'masonry-rails', '~> 0.2.4'
 
 
 
