@@ -36,11 +36,17 @@ class PinsController < ApplicationController
     @pin.destroy
       redirect_to root_path
   end
+  def upvote
+    
+  end
+  def downvote
+    
+  end
 
   private
 
   def pin_params
-    params.require(:pin).permit(:title, :description)
+    params.require(:pin).permit(:title, :description, :image)
   end
   def find_pin
     @pin = Pin.find(params[:id])
