@@ -50,6 +50,14 @@ nav {
 	  img {
 	  	max-width: 100%;
 	  	height: auto;
+	  	-moz-transition: all 0.3s;
+		  -webkit-transition: all 0.3s;
+		  transition: all 0.3s;
+ 			&:hover{
+ 			-moz-transform: scale(1.00);
+		  -webkit-transform: scale(1.004);
+		  transform: scale(1.004);
+ 			}
 	  }
 	  h2 {
 	  	font-size: 22px;
@@ -57,6 +65,11 @@ nav {
 	  	padding: 25px 10px;
 	  	a {
 				color: #474747;
+				text-decoration: none;
+				&:hover{
+					color: #d438f7;
+					font-weight: 700;
+				}
 	  	}
 	  }
 	  .user {
@@ -92,8 +105,13 @@ nav {
 	}
 	.panel-body {
 		padding: 35px;
-		h1 {
+		h2 {
 			margin: 0 0 10px 0;
+			text-decoration: none;
+			a
+			{
+				text-decoration: none;
+			}
 		}
 		.description {
 			color: #868686;

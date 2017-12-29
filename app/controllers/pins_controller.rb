@@ -1,6 +1,6 @@
 class PinsController < ApplicationController
   
-  before_action :find_pin, only: [:show, :update, :edit, :destroy]
+  before_action :find_pin, only: [:show, :update, :edit, :destroy, :upvote]
   before_action :authenticate_user!, except: [:index, :show]
   def index
     @pins = Pin.all.order("created_at DESC")
@@ -37,11 +37,10 @@ class PinsController < ApplicationController
       redirect_to root_path
   end
   def upvote
-    
+    @pin.upvote_by current_user
+    redirect_back fallback_location: @pin
   end
-  def downvote
-    
-  end
+ 
 
   private
 
